@@ -2,22 +2,14 @@
 #include <ESP8266WiFi.h>
 #include <WiFiManager.h>  // https://github.com/tzapu/WiFiManager
 #include <ESP8266Ping.h>  // https://github.com/dancol90/ESP8266Ping
-#include <EasyButton.h>   // https://easybtn.earias.me/docs/on-pressed-for-duration-example
+
 
 //https://easybtn.earias.me
 
 #define LED_PIN 0
-#define BUTTON_PIN 4
+#define BUTTON_PIN 2
 
-int duration = 3000;
-
-//EasyButton btnReset(BUTTON_PIN);
-
-void onPressedForDuration() {
-  Serial.println("Aqui...");
-
-}
-
+WiFiManager wifiManager;
 
 void setup() {
   Serial.begin(115200);
@@ -26,15 +18,12 @@ void setup() {
 
   
   pinMode(LED_PIN, OUTPUT);
- // pinMode(BUTTON_PIN, INPUT);
+  pinMode(BUTTON_PIN, INPUT);
 
- // btnReset.begin();
- // btnReset.onPressedFor(duration,onPressedForDuration );
-
-  WiFiManager wifiManager;
+  
   
 
-wifiManager.resetSettings();
+//wifiManager.resetSettings();
 
 //wifiManager.setAPConfig(IPAddress(10,0,1,1), IPAddress(10,0,1,1), IPAddress(255,255,255,0));
 
@@ -48,10 +37,15 @@ wifiManager.resetSettings();
 
 void loop() {
 
- // btnReset.read();
+ int btnRead = digitalRead(BUTTON_PIN);
+ if(btnRead == 1) {
+   blink(5);
+   wifiManager.resetSettings();
+   wifiManager.autoConnect("AutoConnectAP");
+ }
 
   delay(3000);  
-  Serial.println("PINGANDO O PING");
+
   bool ret = Ping.ping("www.google.com");
   if(ret)
   {
@@ -65,7 +59,6 @@ void loop() {
 }
 
 void blink(int qt){
-  Serial.println(qt);
   digitalWrite(LED_PIN, LOW);
   for(int i=0; i<qt; i++){
     digitalWrite(LED_PIN, HIGH);
