@@ -68,3 +68,5 @@ Daniele Colabardi’s ESP8266PING - https://github.com/dancol90/ESP8266Ping
 Boseji’s Lab – Flashing ESP01 with CP2102 - https://boseji.com/posts/esp8266-flashing-in-linux/
 
 
+### My English isn't very good yet, but I'm learning. Sorry about that
+
