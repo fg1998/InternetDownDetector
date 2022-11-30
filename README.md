@@ -33,9 +33,9 @@ This device can also monitoring google status, so if your connection is ok and g
 ![image5](/images/tela5p.jpg)
 - After this, ESP01 will disconnect from IDDAP and try to connect to desired network. 
 
-If the connection is established, device will blink 3 times and the IDDAP network will disappear, then network monitoring will start, and device will ** blink once every 10 seconds **. If the connections do not work, ex. wrong password, the device will not blink and the IDDAP network will appear again. 
+If the connection is established, the IDDAP network will disappear, then network monitoring will start, and device will **blink once every 10 seconds**. If the connections do not work, ex. wrong password, the device will not blink and the IDDAP network will appear again. 
 
-In case of failed internet connection, the device will ** blink twice every 10 seconds ** until internet connection is established.
+In case of failed internet connection, the device will **blink twice every 10 seconds ** until internet connection is established.**
 
 Reset network’s credential to connect to another network
 If you wish to connect to another network, or need to chance credentials, press the reset button for a while (10 seconds) and the device will reset all network connections. The wifi manager will run again and the entire process to connect to a new network will happen again.
@@ -48,11 +48,11 @@ List of components
 - 1 push button
 - 3.0v – 3.3V power supply (batteries, AC converter, etc.)
 
-Also, you will need a ** USB to UART Bridge **, like CP210x. You can use an NodeMCU ESP12 (this device already had a USB to UART, a voltage regulator and lot of features. But to use only to GPIO ports ESP01 is low cost and had a small form factor.
+Also, you will need a **USB to UART Bridge**, like CP210x. You can use an NodeMCU ESP12 (this device already had a USB to UART, a voltage regulator and lot of features. But to use only to GPIO ports ESP01 is low cost and had a small form factor.
 
 You can see a complete explanation on how to flash ESP01 using CP2102 here, in the complete guide by Boseji’s Lab (link bellow)
 
-** Attention here  **– if you want to use the device with CP210x at the same time, (for testing purposes, for example), don’t  forget to remove the some GPIO connections while you are flashing ESP01 or you won’t connect. With a few pins, ESP01 share some like GPIO1 with TX or GPIO3 with RX. In my case, with the GPIO2 (button pin and the only one not shared  ) connected, Arduino IDE cannot flash and always show a connection error. 
+**Attention here** - if you want to use the device with CP210x at the same time, (for testing purposes, for example), don’t  forget to remove the some GPIO connections while you are flashing ESP01 or you won’t connect. With a few pins, ESP01 share some like GPIO1 with TX or GPIO3 with RX. In my case, with the GPIO2 (button pin and the only one not shared  ) connected, Arduino IDE cannot flash and always show a connection error. 
 
 ### Hardware
 Hardware connections is very simple, and you can connect all components in a wired way, does not need to create a PCB. Take a look at fritzing using a breadboard and a picture of a wired no-pcb mounting.
