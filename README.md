@@ -2,12 +2,12 @@
 
 ## What is this 
 A simple ESP01 based circuit to detect internet (wifi) status. It can connect to any Wi-Fi network and check its status pinging www.google.com and blink a status led.
-There is a reset button and a wifi manager available, so you can connect to any wifi network without any changes in the code. The wifi manager provides a wifi access point and a interface to manage wifi connections.
+There is a reset button and a wifi manager available, so you can connect to any wifi network without changes in the code. The wifi manager provides a wifi access point and a interface to manage wifi connections.
 
 ## How it works
 
 ### Simple explanation
-Pinging google.com and blinking a led once every 10 seconds. In case of internet connection outage, the led will blink twice until the connection is restored.
+Pinging www.google.com and blinking a led once every 10 seconds. In case of internet connection outage, the led will blink twice until the connection is restored.
 
 This device can also monitoring google status, so if your connection is ok and google is off, you can call these guys and alert they and, who knows, ask for a discount on google products. But I’m sure google has another method to avoid servers down than this project 
 
@@ -35,9 +35,9 @@ This device can also monitoring google status, so if your connection is ok and g
 
 If the connection is established, the IDDAP network will disappear, then network monitoring will start, and device will **blink once every 10 seconds**. If the connections do not work, ex. wrong password, the device will not blink and the IDDAP network will appear again. 
 
-In case of failed internet connection, the device will **blink twice every 10 seconds ** until internet connection is established.**
+In case of failed internet connection, the device will **blink twice every 10 seconds **until internet connection is established.**
 
-Reset network’s credential to connect to another network
+### Reset network’s credential to connect to another network
 If you wish to connect to another network, or need to chance credentials, press the reset button for a while (10 seconds) and the device will reset all network connections. The wifi manager will run again and the entire process to connect to a new network will happen again.
 
 List of components
