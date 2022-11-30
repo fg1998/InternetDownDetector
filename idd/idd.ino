@@ -12,7 +12,7 @@
 WiFiManager wifiManager;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   Serial.println("Iniciando ...");
 
@@ -20,17 +20,17 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
   pinMode(BUTTON_PIN, INPUT);
 
-  
+  blink(5);
   
 
-//wifiManager.resetSettings();
+wifiManager.resetSettings();
 
 //wifiManager.setAPConfig(IPAddress(10,0,1,1), IPAddress(10,0,1,1), IPAddress(255,255,255,0));
 
-  wifiManager.autoConnect("AutoConnectAP");
+  wifiManager.autoConnect("IDDAP");
   
   Serial.println("Connected.");
-  blink(5);
+  
   
   
 }
@@ -41,7 +41,7 @@ void loop() {
  if(btnRead == 1) {
    blink(5);
    wifiManager.resetSettings();
-   wifiManager.autoConnect("AutoConnectAP");
+   wifiManager.autoConnect("IDDAP");
  }
 
   Serial.println("ping...");
@@ -63,8 +63,8 @@ void blink(int qt){
   digitalWrite(LED_PIN, LOW);
   for(int i=0; i<qt; i++){
     digitalWrite(LED_PIN, HIGH);
-    delay(100);
+    delay(200);
     digitalWrite(LED_PIN, LOW);
-    delay(100);
+    delay(200);
   }
 }
