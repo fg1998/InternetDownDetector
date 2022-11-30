@@ -16,6 +16,7 @@ This device can also monitoring google status, so if your connection is ok and g
 - LED will blink 5 times – it means the wifi manager is waiting for you to choose a network to monitoring
 - Using any wifi device, connect to a SSID called ‘IDDAP’
 ![image1](/images/tela1p.jpg)
+
 - Attention – Android phones will try to avoid networks without internet access. You need to choose ‘always connect’  **
 ![image2](/images/tela2p.jpg)
 - Using a browser (ex. Chrome mobile), go to URL 192.168.4.1 – this is the default wifi manager URL. 
