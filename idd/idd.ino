@@ -1,5 +1,13 @@
+/*
+Internet Down Detector
+By Fernando Garcia (fg1998) 2022
 
-//#include <ESP8266WiFi.h>
+"All these words are yours, except Europa
+ Attempt no landing there
+ use them together
+ use then in peace"
+*/
+
 #include <WiFiManager.h>  // https://github.com/tzapu/WiFiManager
 #include <ESP8266Ping.h>  // https://github.com/dancol90/ESP8266Ping
 
@@ -11,33 +19,24 @@ WiFiManager wifiManager;
 
 void setup() {
   Serial.begin(9600);
-
-  Serial.println("Iniciando ...");
-
+  Serial.println("Starting ...");
   
   pinMode(LED_PIN, OUTPUT);
   pinMode(BUTTON_PIN, INPUT);
 
   blink(5);
-  
-
-//wifiManager.resetSettings();
-
-//wifiManager.setAPConfig(IPAddress(10,0,1,1), IPAddress(10,0,1,1), IPAddress(255,255,255,0));
 
   wifiManager.autoConnect("IDDAP");
   
   Serial.println("Connected.");
-  
-  
-  
+    
 }
 
 void loop() {
 
  int btnRead = digitalRead(BUTTON_PIN);
  if(btnRead == 1) {
-   blink(3);
+   blink(5);
    wifiManager.resetSettings();
    wifiManager.autoConnect("IDDAP");
  }
