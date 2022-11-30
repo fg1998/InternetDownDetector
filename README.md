@@ -15,15 +15,15 @@ This device can also monitoring google status, so if your connection is ok and g
 - Power on the device with 3.0v – 3,3v (the maximum voltage ESP01 can handle) 
 - LED will blink 5 times – it means the wifi manager is waiting for you to choose a network to monitoring
 - Using any wifi device, connect to a SSID called ‘IDDAP’
-![image1](/images/tela1.jpg)
+![image1](/images/tela1p.jpg)
 - Attention – Android phones will try to avoid networks without internet access. You need to choose ‘always connect’  **
-![image2](/images/tela2.jpg)
+![image2](/images/tela2p.jpg)
 - Using a browser (ex. Chrome mobile), go to URL 192.168.4.1 – this is the default wifi manager URL. 
-![image3](/images/tela3.jpg)
+![image3](/images/tela3p.jpg)
 - Click in ‘Configure Wifi’
-![image4](/images/tela4.jpg)
+![image4](/images/tela4p.jpg)
 - A list of available networks will be display. Click in network’s name you want to be monitoring, type password and click ‘save’.
-![image5](/images/tela5.jpg)
+![image5](/images/tela5p.jpg)
 - After this, ESP01 will disconnect from IDDAP and try to connect to desired network. 
 
 If the connection is established, device will blink 3 times and the IDDAP network will disappear, then network monitoring will start, and device will ** blink once every 10 seconds **. If the connections do not work, ex. wrong password, the device will not blink and the IDDAP network will appear again. 
