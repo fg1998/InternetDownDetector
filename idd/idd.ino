@@ -23,14 +23,14 @@ BlockNot internetCheck(10, SECONDS);
 void resetButtonPressed() {
   Serial.println("reseting WIFI settings ...");
   blink(3);
-  //wifiManager.resetSettings();
+  wifiManager.resetSettings();
 }
 
 
 void setup() {
   Serial.begin(9600);
   Serial.println("Starting ...");
-  blink(3);
+  blink(5);
   
   pinMode(LED_PIN, OUTPUT);
   //pinMode(BUTTON_PIN, INPUT);
