@@ -22,7 +22,7 @@ BlockNot internetCheck(10, SECONDS);
 
 void resetButtonPressed() {
   Serial.println("reseting WIFI settings ...");
-  blink(3);
+  blink(5);
   wifiManager.resetSettings();
 }
 
