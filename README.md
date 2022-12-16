@@ -65,7 +65,7 @@ The software is self-explained and had a few lines. First, lets wifi manager do 
 
 Use Arduino IDE to flash to ESP01. There is a lot of information on internet on how to use ESP8266 with Arduino IDE, please google it.
 
-![image](/image/arduinoIDE.png)
+![image](/images/arduinoIDE.png)
 
 
 ## Thanks to 
